@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Samin - Advanced Portfolio</title>
+  
+  <!-- ENHANCED: Added more advanced fonts and meta tags -->
+  <meta name="description" content="Mohammad Samin - Computer Science Student & Software Developer at University of Waterloo">
+  <meta name="keywords" content="Mohammad Samin, Software Developer, Computer Science, University of Waterloo">
+  <meta name="author" content="Mohammad Samin">
+  
+  <!-- ENHANCED: Advanced font loading with multiple weights -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ENHANCED: Latest Font Awesome version -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- ENHANCED: Added AOS (Animate On Scroll) library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- ENHANCED: Added Particles.js for background effects -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- ENHANCED: Added particles container for animated background -->
+  <div id="particles-js"></div>
+  
+  <!-- ENHANCED: Added loading screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">MS</div>
+      <div class="loading-text">Loading Portfolio...</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENHANCED: Advanced navigation with scroll progress indicator -->
+  <header class="header-enhanced">
+    <div class="scroll-progress"></div>
+    <div class="navbar-enhanced">
+      <div class="logo-enhanced">
+        <span class="logo-text">MS</span>
+        <div class="logo-animation"></div>
+      </div>
+    
+      <!-- ENHANCED: Improved hamburger menu -->
+      <div class="menu-toggle-enhanced" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- ENHANCED: Advanced navigation with active states -->
+      <nav class="nav-enhanced">
+        <ul class="nav-links-enhanced">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- ENHANCED: Hero section with advanced animations -->
+    <div class="hero-container" id="home">
+      <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+          <h1 class="hero-title">
+            <span class="name-highlight">Mohammad Samin</span>
+          </h1>
+          <div class="typing-container">
+            <p class="typing-text">
+              <span id="typing-text"></span>
+              <span class="typing-cursor">|</span>
+            </p>
+          </div>
+          
+          <!-- ENHANCED: Added call-to-action buttons -->
+          <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+            <a href="#projects" class="btn-hero btn-primary">
+              <i class="fas fa-code"></i> View My Work
+            </a>
+            <a href="#contact" class="btn-hero btn-secondary">
+              <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+          </div>
+          
+          <!-- ENHANCED: Added floating social icons -->
+          <div class="hero-social" data-aos="fade-up" data-aos-delay="500">
+            <a href="mailto:msamin@uwaterloo.ca" class="social-float" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://linkedin.com/in/mohammad-samin" class="social-float" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/msamin-25" class="social-float" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- ENHANCED: Animated scroll indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="scroll-text">Scroll Down</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ENHANCED: About section with timeline and stats -->
+  <section class="about-enhanced container" id="about">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">About Me</h2>
+      <div class="section-subtitle">Get to know me better</div>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-left" data-aos="fade-right">
+        <div class="profile-container">
+          <img src="profile.jpg" alt="Mohammad Samin" class="profile-pic-enhanced">
+          <div class="profile-overlay">
+            <div class="profile-status">Available for opportunities</div>
+          </div>
+        </div>
+        
+        <!-- ENHANCED: Added statistics -->
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-number" data-count="15">0</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="7">0</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-count="2">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-right" data-aos="fade-left">
+        <div class="about-text">
+          <p class="about-intro">
+            👋 Hi! I'm Mohammad, a passionate Computer Science student at the 
+            <strong>University of Waterloo</strong> with a love for building 
+            innovative solutions that make a real impact.
+          </p>
+          
+          <p>
+            My journey in software development started with curiosity and has evolved 
+            into a deep passion for problem-solving and creating meaningful projects. 
+            I enjoy exploring new technologies and applying them to real-world challenges.
+          </p>
+          
+          <!-- ENHANCED: Added interests and goals -->
+          <div class="interests-grid">
+            <div class="interest-item">
+              <i class="fas fa-robot"></i>
+              <span>AI & Machine Learning</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Mobile Development</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-cloud"></i>
+              <span>Cloud Technologies</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-database"></i>
+              <span>Data Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENHANCED: Skills section with proficiency levels and animations -->
+  <section id="skills" class="skills-enhanced">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="section-subtitle">Technologies I work with</div>
+      </div>
+      
+      <!-- ENHANCED: Skill categories -->
+      <div class="skills-categories">
+        <button class="skill-filter active" data-category="all">All Skills</button>
+        <button class="skill-filter" data-category="languages">Languages</button>
+        <button class="skill-filter" data-category="frameworks">Frameworks</button>
+        <button class="skill-filter" data-category="tools">Tools</button>
+      </div>
+      
+      <div class="skills-grid-enhanced" data-aos="fade-up" data-aos-delay="200">
+        <!-- ENHANCED: Skills with proficiency bars and categories -->
+        <div class="skill-card-enhanced" data-category="languages" data-aos="flip-left">
+          <div class="skill-icon-container">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-info">
+            <h3>Python</h3>
+            <div class="proficiency-bar">
+              <div class="proficiency-fill" data-proficiency="90"></div>
+            </div>
+            <span class="proficiency-text">Advanced</span>
+          </div>
+        </div>
+        
+        <div class="skill-card-enhanced" data-category="languages" data-aos="flip-left" data-aos-delay="100">
+          <div class="skill-icon-container">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-info">
+            <h3>JavaScript</h3>
+            <div class="proficiency-bar">
+              <div class="proficiency-fill" data-proficiency="85"></div>
+            </div>
+            <span class="proficiency-text">Advanced</span>
+          </div>
+        </div>
+        
+        <div class="skill-card-enhanced" data-category="languages" data-aos="flip-left" data-aos-delay="200">
+          <div class="skill-icon-container">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-info">
+            <h3>HTML5</h3>
+            <div class="proficiency-bar">
+              <div class="proficiency-fill" data-proficiency="95"></div>
+            </div>
+            <span class="proficiency-text">Expert</span>
+          </div>
+        </div>
+        
+        <div class="skill-card-enhanced" data-category="languages" data-aos="flip-left" data-aos-delay="300">
+          <div class="skill-icon-container">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-info">
+            <h3>CSS3</h3>
+            <div class="proficiency-bar">
+              <div class="proficiency-fill" data-proficiency="90"></div>
+            </div>
+            <span class="proficiency-text">Advanced</span>
+          </div>
+        </div>
+        
+        <div class="skill-card-enhanced" data-category="languages" data-aos="flip-left" data-aos-delay="400">
+          <div class="skill-icon-container">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-info">
+            <h3>C/C++</h3>
+            <div class="proficiency-bar">
+              <div class="proficiency-fill" data-proficiency="80"></div>
+            </div>
+            <span class="proficiency-text">Intermediate</span>
+          </div>
+        </div>
+        
+        <div class="skill-card-enhanced" data-category="frameworks" data-aos="flip-left" data-aos-delay="500">
+          <div class="skill-icon-container">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-info">
+            <h3>React</h3>
+            <div class="proficiency-bar">
+              <div class="proficiency-fill" data-proficiency="75"></div>
+            </div>
+            <span class="proficiency-text">Intermediate</span>
+          </div>
+        </div>
+        
+        <div class="skill-card-enhanced" data-category="tools" data-aos="flip-left" data-aos-delay="600">
+          <div class="skill-icon-container">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+            <div class="skill-glow"></div>
+          </div>
+          <div class="skill-info">
+            <h3>Git</h3>
+            <div class="proficiency-bar">
+              <div class="proficiency-fill" data-proficiency="85"></div>
+            </div>
+            <span class="proficiency-text">Advanced</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENHANCED: Experience section with timeline -->
+  <section id="experience" class="experience-enhanced">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-subtitle">My professional journey</div>
+      </div>
+      
+      <div class="timeline-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-date">Jan 2025 - Present</div>
+          <div class="timeline-content">
+            <h3>Tech Tutor</h3>
+            <h4>London Public Library</h4>
+            <p>Helping students with digital hardware, Windows installation, and digital literacy. Assisting patrons with MS Office, printing issues, and email troubleshooting.</p>
+            <div class="timeline-skills">
+              <span class="skill-tag">Windows</span>
+              <span class="skill-tag">MS Office</span>
+              <span class="skill-tag">Technical Support</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-date">Oct 2024 - April 2025</div>
+          <div class="timeline-content">
+            <h3>Company Program Mentor</h3>
+            <h4>Junior Achievement Southwestern Ontario</h4>
+            <p>Mentoring high school students in creating their own businesses. Teaching tech usage, digital tools for marketing, and helping with Shopify website creation.</p>
+            <div class="timeline-skills">
+              <span class="skill-tag">Mentoring</span>
+              <span class="skill-tag">Shopify</span>
+              <span class="skill-tag">Web Development</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-date">Jan 2023 - Aug 2025</div>
+          <div class="timeline-content">
+            <h3>Interpreter & Life Skills Facilitator</h3>
+            <h4>London Cross-Cultural Learner Centre</h4>
+            <p>Providing language support and tech orientation for newcomers. Facilitating awareness sessions about digital security and privacy.</p>
+            <div class="timeline-skills">
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Digital Security</span>
+              <span class="skill-tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENHANCED: Projects section with better cards and filtering -->
+  <section id="projects" class="projects-enhanced">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-subtitle">Some of my recent work</div>
+      </div>
+      
+      <div class="project-grid-enhanced" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card-enhanced" data-aos="zoom-in">
+          <div class="project-image">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/msamin-25/study-planner" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="project-link" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">AI</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>AI Study Planner</h3>
+            <p>An intelligent study planner that uses AI to optimize learning schedules and track progress efficiently.</p>
+            <div class="project-footer">
+              <div class="project-status">
+                <i class="fas fa-circle active"></i>
+                <span>Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="100">
+          <div class="project-image">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/msamin-25/soccer-lineup-app" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="project-link" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">HTML5</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Soccer Lineup Builder</h3>
+            <p>Interactive drag-and-drop application for creating soccer team lineups with real-time sharing capabilities.</p>
+            <div class="project-footer">
+              <div class="project-status">
+                <i class="fas fa-circle completed"></i>
+                <span>Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/msamin-25/personal-portfolio" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="project-link" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-tech-stack">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Portfolio Website</h3>
+            <p>Modern, responsive portfolio website with advanced animations and interactive features.</p>
+            <div class="project-footer">
+              <div class="project-status">
+                <i class="fas fa-circle active"></i>
+                <span>You're here!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ENHANCED: View more projects button -->
+      <div class="projects-footer" data-aos="fade-up" data-aos-delay="400">
+        <a href="https://github.com/msamin-25" class="btn-more-projects">
+          <i class="fab fa-github"></i>
+          View More on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENHANCED: Resume section with preview -->
+  <section id="resume" class="resume-enhanced">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Resume</h2>
+        <div class="section-subtitle">Download my complete resume</div>
+      </div>
+      
+      <div class="resume-content" data-aos="fade-up" data-aos-delay="200">
+        <div class="resume-preview">
+          <div class="resume-icon">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <div class="resume-info">
+            <h3>Mohammad_Samin_Resume.pdf</h3>
+            <p>Complete resume with detailed experience, projects, and technical skills</p>
+            <div class="resume-details">
+              <span><i class="fas fa-calendar"></i> Updated January 2025</span>
+              <span><i class="fas fa-file-alt"></i> 1 page</span>
+              <span><i class="fas fa-download"></i> PDF format</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="resume-actions">
+          <a href="resume.pdf" download class="btn-resume primary">
+            <i class="fas fa-download"></i>
+            Download Resume
+          </a>
+          <a href="resume.pdf" target="_blank" class="btn-resume secondary">
+            <i class="fas fa-eye"></i>
+            Preview Online
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENHANCED: Contact section with form and multiple contact methods -->
+  <section id="contact" class="contact-enhanced">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-subtitle">Let's work together</div>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info" data-aos="fade-right">
+          <h3>Let's Connect!</h3>
+          <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:msamin@uwaterloo.ca">msamin@uwaterloo.ca</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/mohammad-samin" target="_blank">mohammad-samin</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <a href="https://github.com/msamin-25" target="_blank">msamin-25</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <span>Waterloo, ON, Canada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ENHANCED: Contact form -->
+        <div class="contact-form-container" data-aos="fade-left">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+              <div class="form-line"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required>
+              <div class="form-line"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+              <div class="form-line"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <div class="form-line"></div>
+            </div>
+            
+            <button type="submit" class="btn-send-message">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENHANCED: Footer with additional social links -->
+  <footer class="footer-enhanced">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">Mohammad Samin</div>
+          <p class="footer-description">
+            Computer Science student passionate about building innovative solutions.
+          </p>
+        </div>
+        
+        <div class="footer-right">
+          <div class="social-icons-enhanced">
+            <a href="mailto:msamin@uwaterloo.ca" class="social-icon" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://linkedin.com/in/mohammad-samin" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/msamin-25" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="tel:+15197193198" class="social-icon" title="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mohammad Samin. All rights reserved. Made with ❤️</p>
+        <div class="footer-links">
+          <a href="#home">Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ENHANCED: Scroll to top button -->
+  <div class="scroll-to-top" id="scroll-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <!-- ENHANCED: Cursor follower -->
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ENHANCED: Added success message modal -->
+  <div class="message-modal" id="message-modal">
+    <div class="modal-content">
+      <div class="modal-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for reaching out. I'll get back to you soon!</p>
+      <button class="modal-close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- ENHANCED: AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Enhanced JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
