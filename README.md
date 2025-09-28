@@ -32,7 +32,7 @@ This portfolio is deployed using **GitHub Pages**.
 To run locally:
 
 ```bash
-git clone https://github.com/msamin-25/portfolio.git
+git clone https://github.com/msamin-25/advanced-portfolio.git
 cd portfolio
 open index.html
 ```
