@@ -2,7 +2,7 @@
 
 A responsive and modern **personal portfolio website** built with **HTML, CSS, and JavaScript** to showcase my skills, projects, and resume as a Computer Science student at the University of Waterloo.
 
-🌐 **Live Demo:** [Click here](https://msamin-25.github.io/advanced-portfolio/)
+🌐 **Live Demo:** [Click here](https://msamin-25.github.io/my-portfolio/)
 
 ---
 
