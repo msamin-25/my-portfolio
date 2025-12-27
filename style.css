@@ -418,9 +418,10 @@ body {
 }
 
 .social-float:hover {
-  background: var(--primary-color);
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-medium);
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-small);
 }
 
 /* ENHANCED: Scroll indicator */
@@ -507,7 +508,7 @@ section:nth-child(even) {
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: var(--gradient-primary);
+  background: var(--primary-color);
   border-radius: 2px;
 }
 
