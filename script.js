@@ -147,7 +147,6 @@ class PortfolioManager {
     document.addEventListener('DOMContentLoaded', () => {
       this.setupMobileMenu();
       this.setupScrollToTop();
-      const portfolio = new PortfolioManager();
     });
     
     // Form events
@@ -692,41 +691,6 @@ class PortfolioManager {
   }
 }
 
-// ENHANCED: Utility functions
-const Utils = {
-  // Debounce function for performance
-  debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  },
-
-  // Throttle function for performance
-  throttle(func, limit) {
-    let inThrottle;
-    return function() {
-      const args = arguments;
-      const context = this;
-      if (!inThrottle) {
-        func.apply(context, args);
-        inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
-      }
-    };
-  },
-
-  // Smooth animation helper
-  easeInOutCubic(t) {
-    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-  }
-};
-
 // ENHANCED: Modal closing function (global)
 function closeModal() {
   const modal = document.getElementById('message-modal');
@@ -750,39 +714,61 @@ const fadeInObserver = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// ENHANCED: Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize main portfolio manager
-  const portfolio = new PortfolioManager();
-
-  // ===== Theme Toggle (pill) =====
+// =========================
+// THEME TOGGLE - WORKING VERSION
+// =========================
+function initThemeToggle() {
   const btn = document.getElementById("themeToggle");
   const icon = document.getElementById("themeIcon");
   const label = document.getElementById("themeLabel");
-  const key = "theme";
+  const STORAGE_KEY = "portfolio-theme";
 
-  if (btn && icon && label) {
-    const saved = localStorage.getItem(key);
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    const startDark = saved ? saved === "dark" : prefersDark;
-    setTheme(startDark);
-
-    btn.addEventListener("click", () => {
-      const isDark = !document.body.classList.contains("dark");
-      setTheme(isDark);
-      localStorage.setItem(key, isDark ? "dark" : "light");
-    });
-
-    function setTheme(isDark) {
-      document.body.classList.toggle("dark", isDark);
-      label.textContent = isDark ? "dark" : "light";
-      icon.className = isDark ? "fa-solid fa-moon" : "fa-solid fa-sun";
-      btn.setAttribute("aria-pressed", String(isDark));
-    }
+  if (!btn || !icon || !label) {
+    console.error("Theme toggle elements not found!");
+    return;
   }
+
+  // Get saved theme or check system preference
+  const savedTheme = localStorage.getItem(STORAGE_KEY);
+  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const shouldBeDark = savedTheme ? savedTheme === "dark" : prefersDark;
+
+  // Apply initial theme
+  applyTheme(shouldBeDark);
+
+  // Add click event listener
+  btn.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark");
+    const newTheme = !isDark;
+    applyTheme(newTheme);
+    localStorage.setItem(STORAGE_KEY, newTheme ? "dark" : "light");
+    console.log("Theme toggled to:", newTheme ? "dark" : "light");
+  });
+
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.body.classList.add("dark");
+      icon.className = "fa-solid fa-moon";
+      label.textContent = "dark";
+    } else {
+      document.body.classList.remove("dark");
+      icon.className = "fa-solid fa-sun";
+      label.textContent = "light";
+    }
+    btn.setAttribute("aria-pressed", String(isDark));
+    console.log("Theme applied:", isDark ? "dark" : "light");
+  }
+}
+
+// ENHANCED: Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("DOM Loaded - Initializing...");
+  
+  // Initialize theme toggle FIRST
+  initThemeToggle();
+  
+  // Initialize main portfolio manager
+  const portfolio = new PortfolioManager();
 
   // Setup initial styles and fade-in animations for elements
   document.querySelectorAll('.skill-card-enhanced, .project-card-enhanced, .timeline-item').forEach(item => {
@@ -818,19 +804,11 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(`Portfolio loaded in ${loadTime}ms`);
     });
   }
-  
-  // ENHANCED: Service Worker registration (if available)
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(() => {
-      // Service worker not available, continue without it
-    });
-  }
 });
 
 // ENHANCED: Global error handling
 window.addEventListener('error', (e) => {
   console.error('Portfolio Error:', e.error);
-  // Could send error reports to analytics service
 });
 
 // ENHANCED: Performance optimization - lazy load images
@@ -852,49 +830,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-// ENHANCED: Export for module systems (if needed)
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { PortfolioManager, Utils };
-}
-// =========================
-// Theme Toggle (bulletproof)
-// =========================
-(function () {
-  function initThemeToggle() {
-    const btn = document.getElementById("themeToggle");
-    const icon = document.getElementById("themeIcon");
-    const label = document.getElementById("themeLabel");
-    const key = "theme";
-
-    if (!btn || !icon || !label) return;
-
-    const saved = localStorage.getItem(key);
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    const startDark = saved ? saved === "dark" : prefersDark;
-    apply(startDark);
-
-    btn.addEventListener("click", () => {
-      const isDark = !document.body.classList.contains("dark");
-      apply(isDark);
-      localStorage.setItem(key, isDark ? "dark" : "light");
-    });
-
-    function apply(isDark) {
-      document.body.classList.toggle("dark", isDark);
-      label.textContent = isDark ? "dark" : "light";
-      icon.className = isDark ? "fa-solid fa-moon" : "fa-solid fa-sun";
-      btn.setAttribute("aria-pressed", String(isDark));
-      console.log("Theme is now:", isDark ? "dark" : "light"); // debug
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initThemeToggle);
-  } else {
-    initThemeToggle();
-  }
-})();

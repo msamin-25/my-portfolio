@@ -1916,3 +1916,152 @@ body.dark .navbar-enhanced {
 body.dark .navbar-enhanced.scrolled {
   background: rgba(15, 23, 42, 0.98);
 }
+
+/* =========================
+   DARK MODE THEME FIX
+========================= */
+
+/* Dark Mode Color Variables */
+body.dark {
+  --primary-color: #60a5fa;
+  --secondary-color: #1e293b;
+  --accent-color: #22c55e;
+  --text-primary: #e5e7eb;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --bg-primary: #0b1220;
+  --bg-secondary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #334155;
+  --border-color: #334155;
+  --gradient-primary: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  --gradient-secondary: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  --shadow-small: 0 1px 6px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --shadow-large: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Fix navbar in dark mode */
+body.dark .navbar-enhanced {
+  background: rgba(15, 23, 42, 0.92);
+  border-bottom-color: rgba(51, 65, 85, 0.5);
+}
+
+body.dark .navbar-enhanced.scrolled {
+  background: rgba(15, 23, 42, 0.98);
+}
+
+/* Fix hero background in dark mode */
+body.dark .hero-container::before {
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Fix form inputs in dark mode */
+body.dark .form-group input,
+body.dark .form-group textarea {
+  background: rgba(15, 23, 42, 0.5);
+  border-color: rgba(51, 65, 85, 0.5);
+  color: #e5e7eb;
+}
+
+body.dark .form-group input:focus,
+body.dark .form-group textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+/* Fix modal in dark mode */
+body.dark .modal-content {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+/* Fix footer in dark mode */
+body.dark .footer-enhanced {
+  background: #0b1220;
+  border-top-color: rgba(51, 65, 85, 0.5);
+}
+
+/* Fix skill cards in dark mode */
+body.dark .skill-card-enhanced {
+  border-color: rgba(51, 65, 85, 0.3);
+}
+
+/* Fix project cards in dark mode */
+body.dark .project-card-enhanced {
+  border-color: rgba(51, 65, 85, 0.3);
+}
+
+/* Fix timeline in dark mode */
+body.dark .timeline-item::before {
+  border-color: #0b1220;
+}
+
+/* Fix scroll to top button in dark mode */
+body.dark .scroll-to-top {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+/* Theme pill specific styles */
+.theme-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--text-primary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.theme-pill:hover {
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .theme-pill {
+  background: rgba(30, 41, 59, 0.65);
+  border-color: rgba(51, 65, 85, 0.5);
+}
+
+body.dark .theme-pill:hover {
+  background: rgba(30, 41, 59, 0.85);
+}
+
+.theme-pill:active {
+  transform: scale(0.98);
+}
+
+.theme-pill i {
+  font-size: 16px;
+}
+
+/* Ensure smooth transitions */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fix any white backgrounds in dark mode */
+body.dark section:nth-child(even) {
+  background: #0f172a;
+}
+
+body.dark .loading-screen {
+  background: #0b1220;
+}
+
+body.dark .loading-bar {
+  background: #1e293b;
+}
