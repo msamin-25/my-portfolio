@@ -1,21 +1,22 @@
 /* ENHANCED: Advanced CSS Variables for better theming */
 :root {
-  --primary-color: #00d2ff;
-  --secondary-color: #3a47d5;
-  --accent-color: #ff6b6b;
-  --text-primary: #ffffff;
-  --text-secondary: #b8b8b8;
-  --text-muted: #888888;
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #1a1a1a;
-  --bg-card: #222222;
-  --bg-card-hover: #2a2a2a;
-  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  --gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --shadow-small: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --shadow-medium: 0 5px 25px rgba(0, 0, 0, 0.2);
-  --shadow-large: 0 15px 50px rgba(0, 0, 0, 0.3);
-  --border-radius: 12px;
+   --primary-color: #1d4ed8;
+  --secondary-color: #0f172a;
+  --accent-color: #22c55e;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --border-color: #e2e8f0;
+  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  --gradient-secondary: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  --shadow-small: 0 1px 6px rgba(15, 23, 42, 0.08);
+  --shadow-medium: 0 10px 25px rgba(15, 23, 42, 0.08);
+  --shadow-large: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --border-radius: 14px;
   --transition-fast: 0.2s ease;
   --transition-medium: 0.3s ease;
   --transition-slow: 0.5s ease;
