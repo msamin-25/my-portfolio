@@ -128,7 +128,7 @@ body {
 .header-enhanced {
   position: relative;
   min-height: 100vh;
-  background: var(--gradient-secondary);
+  background: var(--bg-primary);
   overflow: hidden;
 }
 
