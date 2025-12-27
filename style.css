@@ -59,6 +59,7 @@ body {
   z-index: -1;
   top: 0;
   left: 0;
+  display: none;
 }
 
 /* ENHANCED: Loading screen */
