@@ -147,6 +147,7 @@ class PortfolioManager {
     document.addEventListener('DOMContentLoaded', () => {
       this.setupMobileMenu();
       this.setupScrollToTop();
+      const portfolio = new PortfolioManager();
     });
     
     // Form events
@@ -753,15 +754,44 @@ const fadeInObserver = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize main portfolio manager
   const portfolio = new PortfolioManager();
-  
-  // Setup fade-in animations for elements
+
+  // ===== Theme Toggle (pill) =====
+  const btn = document.getElementById("themeToggle");
+  const icon = document.getElementById("themeIcon");
+  const label = document.getElementById("themeLabel");
+  const key = "theme";
+
+  if (btn && icon && label) {
+    const saved = localStorage.getItem(key);
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const startDark = saved ? saved === "dark" : prefersDark;
+    setTheme(startDark);
+
+    btn.addEventListener("click", () => {
+      const isDark = !document.body.classList.contains("dark");
+      setTheme(isDark);
+      localStorage.setItem(key, isDark ? "dark" : "light");
+    });
+
+    function setTheme(isDark) {
+      document.body.classList.toggle("dark", isDark);
+      label.textContent = isDark ? "dark" : "light";
+      icon.className = isDark ? "fa-solid fa-moon" : "fa-solid fa-sun";
+      btn.setAttribute("aria-pressed", String(isDark));
+    }
+  }
+
+  // Setup initial styles and fade-in animations for elements
   document.querySelectorAll('.skill-card-enhanced, .project-card-enhanced, .timeline-item').forEach(item => {
     item.style.opacity = '0';
     item.style.transform = 'translateY(20px)';
     item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     fadeInObserver.observe(item);
   });
-  
+
   // ENHANCED: Keyboard navigation support
   document.addEventListener('keydown', (e) => {
     // ESC key closes mobile menu and modals

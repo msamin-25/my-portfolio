@@ -123,6 +123,40 @@ body {
   50% { width: 70%; }
   100% { width: 100%; }
 }
+/* =========================
+   THEME (Light / Dark)
+========================= */
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+
+  --card: #f8fafc;
+  --border: #e2e8f0;
+
+  --link: #2563eb;
+}
+
+body.dark {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+
+  --card: #0f172a;
+  --border: #1f2937;
+
+  --link: #60a5fa;
+}
+
+/* Apply base theme */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+a { color: var(--link); }
+
 
 /* ENHANCED: Advanced Header and Navigation */
 .header-enhanced {
@@ -1805,4 +1839,49 @@ textarea:focus {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-color);
+}
+
+/* Pill theme button (like your screenshot) */
+.theme-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.65);
+  color: var(--text);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Top-left floating like screenshot */
+.theme-pill{
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 9999;
+}
+
+.theme-pill:hover{
+  background: rgba(255,255,255,0.85);
+}
+
+body.dark .theme-pill{
+  background: rgba(15, 23, 42, 0.35);
+}
+body.dark .theme-pill:hover{
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.theme-pill:active{
+  transform: scale(0.98);
 }
