@@ -1885,3 +1885,12 @@ body.dark .theme-pill:hover{
 .theme-pill:active{
   transform: scale(0.98);
 }
+body.dark {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
