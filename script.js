@@ -66,14 +66,14 @@ class PortfolioManager {
 
   // ENHANCED: Particles.js configuration
   initializeParticles() {
-    if (typeof particlesJS !== 'undefined') {
+    if (typeof particlesJS !== 'undefined' && CONFIG.PARTICLE_COUNT > 0) {
       particlesJS('particles-js', {
         particles: {
           number: {
             value: CONFIG.PARTICLE_COUNT,
             density: { enable: true, value_area: 800 }
           },
-          color: { value: '#00d2ff' },
+          color: { value: '#2563eb' },
           shape: {
             type: 'circle',
             stroke: { width: 0, color: '#000000' }
@@ -91,7 +91,7 @@ class PortfolioManager {
           line_linked: {
             enable: true,
             distance: 150,
-            color: '#00d2ff',
+            color: '#2563eb',
             opacity: 0.4,
             width: 1
           },
