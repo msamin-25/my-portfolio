@@ -1,38 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohammad Samin - Portfolio</title>
   
-  <!-- ENHANCED: Added more advanced fonts and meta tags -->
   <meta name="description" content="Mohammad Samin - Computer Science Student & Software Developer at University of Waterloo">
   <meta name="keywords" content="Mohammad Samin, Software Developer, Computer Science, University of Waterloo">
   <meta name="author" content="Mohammad Samin">
   
-  <!-- ENHANCED: Advanced font loading with multiple weights -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- ENHANCED: Latest Font Awesome version -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- ENHANCED: Added AOS (Animate On Scroll) library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- ENHANCED: Added Particles.js for background effects -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
-  <!-- ENHANCED: Added particles container for animated background -->
   <div id="particles-js"></div>
   
-  <!-- ENHANCED: Added loading screen -->
   <div class="loading-screen" id="loading-screen">
     <div class="loading-content">
       <div class="loading-logo">MS</div>
@@ -43,7 +33,12 @@
     </div>
   </div>
 
-  <!-- ENHANCED: Advanced navigation with scroll progress indicator -->
+  <!-- Theme Toggle Button -->
+  <button id="themeToggle" class="theme-pill" type="button" aria-label="Toggle theme">
+    <i id="themeIcon" class="fa-solid fa-moon"></i>
+    <span id="themeLabel">dark</span>
+  </button>
+
   <header class="header-enhanced">
     <div class="scroll-progress"></div>
     <div class="navbar-enhanced">
@@ -52,14 +47,12 @@
         <div class="logo-animation"></div>
       </div>
     
-      <!-- ENHANCED: Improved hamburger menu -->
       <div class="menu-toggle-enhanced" id="menu-toggle">
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <!-- ENHANCED: Advanced navigation with active states -->
       <nav class="nav-enhanced">
         <ul class="nav-links-enhanced">
           <li><a href="#home" class="nav-link active">Home</a></li>
@@ -71,14 +64,8 @@
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <button id="themeToggle" class="theme-pill" type="button" aria-label="Toggle theme" aria-pressed="false">
-        <i id="themeIcon" class="fa-solid fa-moon"></i>
-        <span id="themeLabel">dark</span>
-      </button>
-
     </div>
     
-    <!-- ENHANCED: Hero section with advanced animations -->
     <div class="hero-container" id="home">
       <div class="container">
         <div class="hero-content" data-aos="fade-up">
@@ -92,7 +79,6 @@
             </p>
           </div>
           
-          <!-- ENHANCED: Added call-to-action buttons -->
           <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
             <a href="#projects" class="btn-hero btn-primary">
               <i class="fas fa-code"></i> View My Work
@@ -102,7 +88,6 @@
             </a>
           </div>
           
-          <!-- ENHANCED: Added floating social icons -->
           <div class="hero-social" data-aos="fade-up" data-aos-delay="500">
             <a href="mailto:msamin@uwaterloo.ca" class="social-float" title="Email">
               <i class="fas fa-envelope"></i>
@@ -116,7 +101,6 @@
           </div>
         </div>
         
-        <!-- ENHANCED: Animated scroll indicator -->
         <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
           <div class="mouse">
             <div class="wheel"></div>
@@ -127,7 +111,6 @@
     </div>
   </header>
 
-  <!-- ENHANCED: About section with timeline and stats -->
   <section class="about-enhanced container" id="about">
     <div class="section-header" data-aos="fade-up">
       <h2 class="section-title">About Me</h2>
@@ -143,7 +126,6 @@
           </div>
         </div>
         
-        <!-- ENHANCED: Added statistics -->
         <div class="stats-container">
           <div class="stat-item">
             <div class="stat-number" data-count="15">0</div>
@@ -174,7 +156,6 @@
             I enjoy exploring new technologies and applying them to real-world challenges.
           </p>
           
-          <!-- ENHANCED: Added interests and goals -->
           <div class="interests-grid">
             <div class="interest-item">
               <i class="fas fa-robot"></i>
@@ -198,7 +179,6 @@
     </div>
   </section>
 
-  <!-- ENHANCED: Skills section with proficiency levels and animations -->
   <section id="skills" class="skills-enhanced">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -206,7 +186,6 @@
         <div class="section-subtitle">Technologies I work with</div>
       </div>
       
-      <!-- ENHANCED: Skill categories -->
       <div class="skills-categories">
         <button class="skill-filter active" data-category="all">All Skills</button>
         <button class="skill-filter" data-category="languages">Languages</button>
@@ -215,7 +194,6 @@
       </div>
       
       <div class="skills-grid-enhanced" data-aos="fade-up" data-aos-delay="200">
-        <!-- ENHANCED: Skills with proficiency bars and categories -->
         <div class="skill-card-enhanced" data-category="languages" data-aos="flip-left">
           <div class="skill-icon-container">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
@@ -317,7 +295,6 @@
     </div>
   </section>
 
-  <!-- ENHANCED: Experience section with timeline -->
   <section id="experience" class="experience-enhanced">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -371,7 +348,6 @@
     </div>
   </section>
 
-  <!-- ENHANCED: Projects section with better cards and filtering -->
   <section id="projects" class="projects-enhanced">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -392,9 +368,6 @@
                   rel="noopener noreferrer">
                   <i class="fab fa-github"></i>
                 </a>
-
-                <!-- If you have a live demo, replace # with the URL.
-                    If you don't have one, you can delete this <a> block. -->
                 <a href="#"
                   class="project-link"
                   title="Live Demo"
@@ -404,29 +377,22 @@
                 </a>
               </div>
             </div>
-
             <div class="project-tech-stack">
               <span class="tech-badge">JavaScript</span>
               <span class="tech-badge">TypeScript</span>
-              <!-- Add/remove badges as needed -->
             </div>
           </div>
-
           <div class="project-content">
             <h3>GAMES.RANDOM</h3>
             <p>A browser-based 2D game sandbox where learners edit live code and instantly see gameplay changes.</p>
-
             <div class="project-footer">
               <div class="project-status">
                 <i class="fas fa-circle active"></i>
                 <span>Active</span>
-                <!-- If it’s completed, change to:
-                    <i class="fas fa-circle completed"></i><span>Completed</span> -->
               </div>
             </div>
           </div>
         </div>
-
                 
         <div class="project-card-enhanced" data-aos="zoom-in" data-aos-delay="100">
           <div class="project-image">
@@ -488,7 +454,6 @@
         </div>
       </div>
       
-      <!-- ENHANCED: View more projects button -->
       <div class="projects-footer" data-aos="fade-up" data-aos-delay="400">
         <a href="https://github.com/msamin-25" class="btn-more-projects">
           <i class="fab fa-github"></i>
@@ -498,7 +463,6 @@
     </div>
   </section>
 
-  <!-- ENHANCED: Resume section with preview -->
   <section id="resume" class="resume-enhanced">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -536,7 +500,6 @@
     </div>
   </section>
 
-  <!-- ENHANCED: Contact section with form and multiple contact methods -->
   <section id="contact" class="contact-enhanced">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
@@ -592,7 +555,6 @@
           </div>
         </div>
         
-        <!-- ENHANCED: Contact form -->
         <div class="contact-form-container" data-aos="fade-left">
           <form class="contact-form" id="contact-form">
             <div class="form-group">
@@ -631,7 +593,6 @@
     </div>
   </section>
 
-  <!-- ENHANCED: Footer with additional social links -->
   <footer class="footer-enhanced">
     <div class="container">
       <div class="footer-content">
@@ -669,15 +630,12 @@
     </div>
   </footer>
 
-  <!-- ENHANCED: Scroll to top button -->
   <div class="scroll-to-top" id="scroll-to-top">
     <i class="fas fa-chevron-up"></i>
   </div>
 
-  <!-- ENHANCED: Cursor follower -->
   <div class="cursor-follower" id="cursor-follower"></div>
 
-  <!-- ENHANCED: Added success message modal -->
   <div class="message-modal" id="message-modal">
     <div class="modal-content">
       <div class="modal-icon">
@@ -689,10 +647,7 @@
     </div>
   </div>
 
-  <!-- ENHANCED: AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- Enhanced JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
