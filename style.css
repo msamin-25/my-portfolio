@@ -284,13 +284,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 210, 255, 0.1) 0%, rgba(58, 71, 213, 0.1) 100%);
-  animation: gradient-shift 8s ease-in-out infinite;
-}
-
-@keyframes gradient-shift {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: 0.3; }
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .hero-content {
@@ -307,11 +301,8 @@ body {
 }
 
 .name-highlight {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: text-glow 3s ease-in-out infinite alternate;
+  color: var(--primary-color);
+  font-weight: 800;
 }
 
 @keyframes text-glow {
