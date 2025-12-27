@@ -857,3 +857,44 @@ document.addEventListener('DOMContentLoaded', () => {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { PortfolioManager, Utils };
 }
+// =========================
+// Theme Toggle (bulletproof)
+// =========================
+(function () {
+  function initThemeToggle() {
+    const btn = document.getElementById("themeToggle");
+    const icon = document.getElementById("themeIcon");
+    const label = document.getElementById("themeLabel");
+    const key = "theme";
+
+    if (!btn || !icon || !label) return;
+
+    const saved = localStorage.getItem(key);
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const startDark = saved ? saved === "dark" : prefersDark;
+    apply(startDark);
+
+    btn.addEventListener("click", () => {
+      const isDark = !document.body.classList.contains("dark");
+      apply(isDark);
+      localStorage.setItem(key, isDark ? "dark" : "light");
+    });
+
+    function apply(isDark) {
+      document.body.classList.toggle("dark", isDark);
+      label.textContent = isDark ? "dark" : "light";
+      icon.className = isDark ? "fa-solid fa-moon" : "fa-solid fa-sun";
+      btn.setAttribute("aria-pressed", String(isDark));
+      console.log("Theme is now:", isDark ? "dark" : "light"); // debug
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initThemeToggle);
+  } else {
+    initThemeToggle();
+  }
+})();
