@@ -21,7 +21,7 @@ your-portfolio/
 ├── index.html (updated - added script tag)
 ├── style.css (updated - added floating CSS)
 ├── script.js (unchanged)
-├── floating-motion.js (NEW FILE - main floating effect)
+├── floating-motion.js (Newly added - main floating effect)
 ├── profile.jpg
 └── resume.pdf
 
@@ -32,6 +32,7 @@ your-portfolio/
 - **HTML5**
 - **CSS3** (Flexbox, Grid, Animations)
 - **JavaScript (ES6)**
+- **TypeScript ** Modified with JavaScript\*\*
 
 ---
 
