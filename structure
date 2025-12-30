@@ -1,0 +1,7 @@
+your-portfolio/
+├── index.html              (updated - added script tag)
+├── style.css               (updated - added floating CSS)
+├── script.js               (unchanged)
+├── floating-motion.js      (NEW FILE - main floating effect)
+├── profile.jpg
+└── resume.pdf
