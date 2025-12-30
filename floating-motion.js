@@ -80,7 +80,7 @@
             // Original position
             originalRect: element.getBoundingClientRect(),
             
-            // Hover state
+            // Hover state indicator for tilt effect
             isHovered: false,
           });
 
