@@ -797,7 +797,7 @@ customStyles.textContent = `
     position: fixed;
     width: 6px;
     height: 6px;
-    background: #2563eb;
+    background: #0d2455ff;
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
@@ -806,11 +806,11 @@ customStyles.textContent = `
   }
   
   body.dark .custom-cursor {
-    border-color: rgba(96, 165, 250, 0.5);
+    border-color: rgba(10, 86, 178, 0.5);
   }
   
   body.dark .custom-cursor-dot {
-    background: #60a5fa;
+    background: #2c5382ff;
   }
   
   /* Hide custom cursor on mobile */
@@ -825,12 +825,12 @@ customStyles.textContent = `
   .ripple-effect {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(240, 214, 214, 0.6);
     transform: scale(0);
     animation: ripple 0.6s ease-out;
     pointer-events: none;
   }
-  
+   
   @keyframes ripple {
     to {
       transform: scale(2);
