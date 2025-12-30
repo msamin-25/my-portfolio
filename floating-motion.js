@@ -84,7 +84,7 @@
             isHovered: false,
           });
 
-          // Set initial styles
+          // Set initial styles for performance
           element.style.transition = 'none';
           element.style.willChange = 'transform';
           
