@@ -1,5 +1,5 @@
 // ============================================
-// SMOOTH FLOATING EFFECT - Like muhibwaqar.com
+// SMOOTH FLOATING EFFECT 
 // Save this as: floating-motion.js
 // ============================================
 
@@ -209,7 +209,7 @@
   }
 
   // ============================================
-  // Parallax Background Effect
+  // Parallax Background Effect 
   // ============================================
   function initParallaxBackground() {
     const hero = document.querySelector('.hero-container');
@@ -273,7 +273,7 @@
   }
 
   // ============================================
-  // Handle Window Resize
+  // Handle Window Resize 
   // ============================================
   function handleResize() {
     // Update original positions on resize
