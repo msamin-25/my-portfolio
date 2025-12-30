@@ -2659,3 +2659,269 @@ body.dark .project-card-enhanced:hover::before {
 .social-float {
   will-change: transform, box-shadow;
 }
+
+/* ============================================
+   SMOOTH FLOATING EFFECT CSS
+   Add this to the END of your style.css
+   ============================================ */
+
+/* Enable 3D transforms and smooth transitions */
+.skill-card-enhanced,
+.project-card-enhanced,
+.timeline-content,
+.stat-item,
+.interest-item,
+.contact-method,
+.resume-preview,
+.about-left,
+.about-right,
+.profile-pic-enhanced,
+.hero-content,
+.section-header {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+  /* Remove transition to let JavaScript handle smooth movement */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Smooth scroll behavior for entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shifts during animation */
+body {
+  overflow-x: hidden;
+}
+
+/* Enhanced hover effects that work with floating */
+.skill-card-enhanced:hover,
+.project-card-enhanced:hover {
+  box-shadow: 0 30px 80px rgba(37, 99, 235, 0.3) !important;
+  z-index: 10;
+}
+
+body.dark .skill-card-enhanced:hover,
+body.dark .project-card-enhanced:hover {
+  box-shadow: 0 30px 80px rgba(96, 165, 250, 0.3) !important;
+}
+
+/* Smooth shadow transitions for cards */
+.skill-card-enhanced,
+.project-card-enhanced,
+.timeline-content,
+.resume-preview {
+  transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s ease;
+}
+
+/* Profile picture floating container */
+.profile-container {
+  transform-style: preserve-3d;
+}
+
+.profile-pic-enhanced {
+  backface-visibility: hidden;
+}
+
+/* Hero section parallax ready */
+.hero-container {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Section parallax ready */
+section {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Buttons with smooth hover */
+.btn-hero,
+.btn-resume,
+.btn-more-projects,
+.social-float,
+.social-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stats items smooth animation */
+.stat-item {
+  position: relative;
+}
+
+/* Interest items smooth hover */
+.interest-item {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-item:hover {
+  background: var(--bg-card-hover);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+
+/* Contact methods smooth hover */
+.contact-method {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-method:hover {
+  background: var(--bg-card-hover);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+
+/* Timeline smooth interaction */
+.timeline-content {
+  transition: background-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.timeline-content:hover {
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.25);
+}
+
+/* Smooth glow effect on active elements */
+@keyframes smooth-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.5));
+  }
+}
+
+.skill-card-enhanced:hover .skill-icon-container,
+.project-card-enhanced:hover .project-tech-stack {
+  animation: smooth-glow 2s ease-in-out infinite;
+}
+
+/* Optimize performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .skill-card-enhanced,
+  .project-card-enhanced,
+  .timeline-content,
+  .stat-item,
+  .hero-content,
+  .section-header {
+    /* Reduce performance impact on mobile */
+    will-change: auto;
+  }
+}
+
+/* Smooth fade-in for elements entering viewport */
+@keyframes fade-in-float {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state - prevent flash */
+body:not(.floating-ready) .skill-card-enhanced,
+body:not(.floating-ready) .project-card-enhanced {
+  opacity: 0;
+  animation: fade-in-float 0.6s ease-out forwards;
+}
+
+body.floating-ready .skill-card-enhanced,
+body.floating-ready .project-card-enhanced {
+  opacity: 1;
+}
+
+/* Smooth cursor for desktop */
+@media (min-width: 769px) {
+  * {
+    cursor: none !important;
+  }
+  
+  a, button, input, textarea, select {
+    cursor: none !important;
+  }
+}
+
+/* Enhanced scrollbar for smooth experience */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Smooth page transitions */
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add stagger effect to cards */
+.skill-card-enhanced:nth-child(1) { animation-delay: 0s; }
+.skill-card-enhanced:nth-child(2) { animation-delay: 0.1s; }
+.skill-card-enhanced:nth-child(3) { animation-delay: 0.2s; }
+.skill-card-enhanced:nth-child(4) { animation-delay: 0.3s; }
+.skill-card-enhanced:nth-child(5) { animation-delay: 0.4s; }
+.skill-card-enhanced:nth-child(6) { animation-delay: 0.5s; }
+.skill-card-enhanced:nth-child(7) { animation-delay: 0.6s; }
+
+.project-card-enhanced:nth-child(1) { animation-delay: 0s; }
+.project-card-enhanced:nth-child(2) { animation-delay: 0.15s; }
+.project-card-enhanced:nth-child(3) { animation-delay: 0.3s; }
+
+/* Smooth background gradient animation */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Optional: Animated gradient background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.03) 0%, transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+  animation: gradient-shift 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+body.dark::before {
+  background: radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.05) 0%, transparent 50%);
+}
