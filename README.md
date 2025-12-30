@@ -15,6 +15,16 @@ A responsive and modern **personal portfolio website** built with **HTML, CSS, a
 - 📜 **Resume Download** – direct link to my resume PDF
 - 📬 **Contact Section** – quick links to email, LinkedIn, and GitHub
 
+## Full Structure of this Project
+
+your-portfolio/
+├── index.html (updated - added script tag)
+├── style.css (updated - added floating CSS)
+├── script.js (unchanged)
+├── floating-motion.js (NEW FILE - main floating effect)
+├── profile.jpg
+└── resume.pdf
+
 ---
 
 ## 🛠️ Tech Stack
