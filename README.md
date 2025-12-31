@@ -291,32 +291,6 @@ This portfolio is deployed using **GitHub Pages**.
 
 ---
 
-### Dark mode not toggling?
-
-```bash
-# Clear localStorage
-localStorage.clear()
-# Refresh page
-```
-
-### Animations laggy?
-
-```javascript
-// Reduce animation intensity in floating-motion.js
-transitionSpeed: 0.05,  // Lower = smoother but slower
-```
-
-### Mobile issues?
-
-```css
-/* Check if mobile styles are applied */
-@media (max-width: 768px) {
-  /* Your mobile styles */
-}
-```
-
----
-
 ## 📊 Browser Support
 
 | Browser | Version | Support |
@@ -329,22 +303,6 @@ transitionSpeed: 0.05,  // Lower = smoother but slower
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 ## 👨‍💻 Author
@@ -354,17 +312,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - 🎓 Computer Science Student at University of Waterloo
 - 🌐 Portfolio: [msamin.me](https://msamin.me)
 - 💼 LinkedIn: [mohammad-samin](https://linkedin.com/in/mohammad-samin)
-- 🐱 GitHub: [@msamin-25](https://github.com/msamin-25)
-
----
-
-## 🙏 Acknowledgments
-
-- Font Awesome for icons
-- Google Fonts for typography
-- Particles.js for background effects
-- AOS library for scroll animations
-- The web development community for inspiration
 
 ---
 
