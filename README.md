@@ -257,45 +257,6 @@ tiltStrength: 5,         // Degrees of tilt on hover
 
 This portfolio is deployed using **GitHub Pages**.
 
-**Deploy your own:**
-
-```bash
-1. Push your code to GitHub
-2. Go to repository Settings
-3. Navigate to Pages section
-4. Select main branch
-5. Click Save
-6. Visit: https://your-username.github.io/repository-name
-```
-
-### Other Deployment Options
-
-#### Vercel
-
-```bash
-npm i -g vercel
-vercel
-```
-
-#### Netlify
-
-```bash
-# Drag and drop your folder to netlify.com
-# Or use Netlify CLI
-npm i -g netlify-cli
-netlify deploy
-```
-
-#### Custom Domain
-
-1. Add `CNAME` file with your domain
-2. Configure DNS settings
-3. Enable HTTPS in repository settings
-
----
-
-## 🎨 Color Schemes
-
 ### Light Mode
 
 - Background: `#f8fafc`
@@ -329,16 +290,6 @@ netlify deploy
 - 🟢 SEO: 100
 
 ---
-
-## 🐛 Troubleshooting
-
-### Floating effects not working?
-
-```bash
-# Check browser console (F12)
-# Look for: "✨ Smooth floating effects active!"
-# Ensure floating-motion.js is loaded
-```
 
 ### Dark mode not toggling?
 
