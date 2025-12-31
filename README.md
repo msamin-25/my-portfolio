@@ -140,27 +140,14 @@ open index.html
 
 **Edit `style.css` (lines 1-20):**
 
-```css
+````css
 :root {
   --primary-color: #1d4ed8; /* Change primary color */
   --secondary-color: #0f172a; /* Change secondary color */
   --accent-color: #22c55e; /* Change accent color */
 }
-```
 
-### 3️⃣ Projects
-
-**Edit `index.html` (Projects Section):**
-
-```html
-<div class="project-card-enhanced">
-  <h3>Your Project Name</h3>
-  <p>Your project description...</p>
-  <span class="tech-badge">Tech Stack</span>
-</div>
-```
-
-### 4️⃣ Skills
+###
 
 **Edit `index.html` (Skills Section):**
 
@@ -179,7 +166,7 @@ const CONFIG = {
   floatSpeed: 0.001, // Adjust float speed (0.0005-0.002)
   tiltStrength: 5, // Adjust tilt angle (3-10)
 };
-```
+````
 
 ---
 
@@ -196,7 +183,7 @@ const CONFIG = {
 
 ## 🌊 Floating Motion Effect
 
-The portfolio features a premium **smooth floating motion** inspired by [muhibwaqar.com](https://muhibwaqar.com):
+The portfolio features a premium **smooth floating motion**
 
 ### Key Features:
 
