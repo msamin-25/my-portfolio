@@ -14,8 +14,6 @@ A responsive and modern **personal portfolio website** built with **HTML, CSS, a
 
 ---
 
-## ✨ Features
-
 ### 🎨 Design & UI
 
 - 📱 **Fully Responsive** – Seamless experience across desktop, tablet, and mobile
@@ -92,8 +90,6 @@ My-portfolio/
 ---
 
 ## 🚀 Quick Start
-
-### Prerequisites
 
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - Git (optional, for cloning)
