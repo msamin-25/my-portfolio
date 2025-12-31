@@ -32,7 +32,7 @@ your-portfolio/
 - **HTML5**
 - **CSS3** (Flexbox, Grid, Animations)
 - **JavaScript (ES6)**
-- **TypeScript ** Modified with JavaScript\*\*
+- **TypeScript** Modified with JavaScript
 
 ---
 
