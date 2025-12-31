@@ -138,36 +138,6 @@ open index.html
 
 ### 2️⃣ Colors & Theme
 
-**Edit `style.css` (lines 1-20):**
-
-````css
-:root {
-  --primary-color: #1d4ed8; /* Change primary color */
-  --secondary-color: #0f172a; /* Change secondary color */
-  --accent-color: #22c55e; /* Change accent color */
-}
-
-###
-
-**Edit `index.html` (Skills Section):**
-
-- Add/remove skill cards
-- Update proficiency levels
-- Change skill icons
-
-### 5️⃣ Floating Effect Intensity
-
-**Edit `floating-motion.js` (lines 10-17):**
-
-```javascript
-const CONFIG = {
-  mouseFollowStrength: 0.03, // Adjust mouse follow (0.01-0.05)
-  floatAmplitude: 20, // Adjust float height (10-30)
-  floatSpeed: 0.001, // Adjust float speed (0.0005-0.002)
-  tiltStrength: 5, // Adjust tilt angle (3-10)
-};
-````
-
 ---
 
 ## 📱 Responsive Breakpoints
