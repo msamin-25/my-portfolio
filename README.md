@@ -46,7 +46,7 @@ A responsive and modern **personal portfolio website** built with **HTML, CSS, a
 ## 📁 Project Structure
 
 ```
-your-portfolio/
+My-portfolio/
 │
 ├── 📄 index.html              # Main HTML structure
 ├── 🎨 style.css               # Core styles + floating CSS
@@ -135,19 +135,6 @@ open index.html
 ## 🎨 Customization Guide
 
 ### 1️⃣ Personal Information
-
-**Edit `index.html`:**
-
-```html
-<!-- Update your name -->
-<span class="name-highlight">Your Name</span>
-
-<!-- Update your role -->
-const roles = ["Your Role 1", "Your Role 2", "Your Role 3"];
-
-<!-- Update contact info -->
-<a href="mailto:your-email@example.com">your-email@example.com</a>
-```
 
 ### 2️⃣ Colors & Theme
 
@@ -430,13 +417,11 @@ This project is open source and available under the [MIT License](LICENSE).
 - 🌐 Portfolio: [msamin.me](https://msamin.me)
 - 💼 LinkedIn: [mohammad-samin](https://linkedin.com/in/mohammad-samin)
 - 🐱 GitHub: [@msamin-25](https://github.com/msamin-25)
-- 📧 Email: msamin@uwaterloo.ca
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Inspired by [muhibwaqar.com](https://muhibwaqar.com) for floating effects
 - Font Awesome for icons
 - Google Fonts for typography
 - Particles.js for background effects
