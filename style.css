@@ -2925,3 +2925,10 @@ body::before {
 body.dark::before {
   background: radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.05) 0%, transparent 50%);
 }
+
+.logo{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover; /* prevents stretching */
+}
