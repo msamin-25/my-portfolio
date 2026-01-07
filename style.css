@@ -2932,3 +2932,117 @@ body.dark::before {
   border-radius: 50%;
   object-fit: cover; /* prevents stretching */
 }
+
+/* ============================================
+   FIX BLANK SPACE AFTER CONTACT SECTION
+   Add this to the END of your style.css
+   ============================================ */
+
+/* Remove excessive padding from contact section */
+.contact-enhanced {
+  padding: 5rem 0 3rem !important; /* Reduced bottom padding */
+}
+
+/* Ensure footer is directly after contact */
+.footer-enhanced {
+  margin-top: 0 !important;
+  padding-top: 3rem !important;
+}
+
+/* Remove any body padding at bottom */
+body {
+  padding-bottom: 0 !important;
+}
+
+/* Fix main container padding */
+main {
+  padding-bottom: 0 !important;
+}
+
+/* Remove excessive section spacing */
+section:last-of-type {
+  padding-bottom: 3rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Ensure no extra space from message modal */
+.message-modal {
+  position: fixed !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove any unexpected margins */
+.contact-enhanced + * {
+  margin-top: 0 !important;
+}
+
+/* Fix any overflow issues */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Ensure footer sticks properly */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Remove scroll padding that might cause blank space */
+html {
+  scroll-padding-top: 80px;
+  scroll-padding-bottom: 0 !important;
+}
+
+/* Fix for any absolute positioned elements causing space */
+.contact-enhanced,
+.footer-enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tighten up the layout */
+section#contact {
+  margin-bottom: 0 !important;
+  padding-bottom: 2rem !important;
+}
+
+/* Make sure there's no pseudo-element adding space */
+.contact-enhanced::after,
+.footer-enhanced::before {
+  display: none !important;
+}
+
+/* ============================================
+   RESPONSIVE FIXES
+   ============================================ */
+
+@media (max-width: 768px) {
+  .contact-enhanced {
+    padding: 3rem 0 2rem !important;
+  }
+  
+  .footer-enhanced {
+    padding-top: 2rem !important;
+  }
+  
+  section:last-of-type {
+    padding-bottom: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-enhanced {
+    padding: 2rem 0 1rem !important;
+  }
+  
+  .footer-enhanced {
+    padding-top: 1.5rem !important;
+  }
+}
